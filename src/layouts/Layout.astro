@@ -27,7 +27,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
         <meta name="twitter:title" content={site.title} />
         <meta name="twitter:description" content={site.description} />
         <meta name="twitter:image" content={site.preview} />
-    </head><body>
+    </head>
+    <body class="max-w-113 mx-auto py-30">
         <slot />
     </body>
 </html>
