@@ -8,7 +8,7 @@
     --font-i: 'Host Grotesk', sans-serif;
     --font-sans: 'Overused Grotesk', sans-serif;
     --font-mono: 'Space Mono', monospace;
-    --text-base: 0.93rem;
+    --text-base: 0.935rem;
     --leading-snug: 1.37;
 
     --color-dark-50: #f3f3f3;
@@ -111,7 +111,7 @@
     * {
         @apply border-border outline-ring/50;
         scrollbar-width: thin;
-        scrollbar-color: var(--color-muted) var(--color-background);
+        scrollbar-color: var(--color-ring) var(--color-background);
     }
 
     html {
@@ -134,8 +134,9 @@
 
     h2,
     h3,
-    p {
-        word-spacing: 0.02em;
+    p,
+    span {
+        word-spacing: 0.028em;
     }
 
     p {

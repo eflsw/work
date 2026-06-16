@@ -170,6 +170,10 @@ const stack = [
 
 const awards = [
     {
+        title: 'Chess Tournament',
+        info: 'First Place, 2024'
+    },
+    {
         title: 'Outstanding Commitment to Reading',
         info: 'Award, 2024'
     },
@@ -191,7 +195,7 @@ const awards = [
 <Layout>
     <Header client:load />
 
-    <main class="mt-15 space-y-10">
+    <main class="mt-15 space-y-13">
         <article class="space-y-2">
             <p>
                 Front end developer with +3 years of experience in web development. With the intention of exploring its potential to express concepts, and solve problems.
@@ -230,7 +234,7 @@ const awards = [
 
                                     <div class="mt-2 flex flex-wrap items-center gap-1">
                                         {project.stack.map((tag) => (
-                                            <span class="size-fit px-1.5 py-0.5 text-xs text-muted-foreground tracking-normal bg-card rounded-sm select-none">{tag}</span>
+                                            <span class="size-fit px-1.5 py-0.5 text-xs tracking-normal bg-card rounded-sm select-none">{tag}</span>
                                         ))}
                                     </div>
                                 </div>
@@ -252,7 +256,7 @@ const awards = [
                         <p>{item.description}</p>
                         <div class="mt-2 flex items-center gap-1">
                             {item.tags.map((tag) => (
-                                <span class="size-fit px-1.5 py-0.5 text-xs text-muted-foreground tracking-normal bg-card rounded-sm select-none">{tag}</span>
+                                <span class="size-fit px-1.5 py-0.5 text-xs tracking-normal bg-card rounded-sm select-none">{tag}</span>
                             ))}
                         </div>
                     </div>
