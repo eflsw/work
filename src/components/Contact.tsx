@@ -4,7 +4,7 @@ import { IconArrowUpRight } from '@tabler/icons-react'
 
 export default function Contact() {
     return (
-        <div className="w-full grid grid-cols-4 gap-2">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-2">
             <Button asChild variant="outline" className="w-full">
                 <a href={mail.url}>
                     Contact

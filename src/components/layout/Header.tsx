@@ -12,7 +12,7 @@ export default function Header() {
                 </div>
                 <div className="select-none">
                     <h1>
-                        <DiaTextReveal text="Atlas Estrada" className="font-i text-[1rem] tracking-tighter text-black dark:text-white" />
+                        <DiaTextReveal text="D. Estrada" className="font-i text-[1rem] tracking-tighter text-black dark:text-white" />
                     </h1>
                     <h2 className="text-muted-foreground">Web developer</h2>
                 </div>
