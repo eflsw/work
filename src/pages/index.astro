@@ -67,7 +67,7 @@ const projects = [
         name: 'SIGEI',
         type: 'System',
         date: 'October, 2024',
-        stack: ['PHP', 'SQL', 'MySQL', 'JQuery', 'JavaScript', 'CSS', 'HTML', 'XAMPP']
+        stack: ['PHP', 'SQL', 'MySQL', 'JQuery', 'JavaScript', 'Bootstrap', 'CSS', 'HTML']
     }
 ]
 
@@ -219,11 +219,11 @@ const awards = [
                                 href={project.url}
                                 target={project.url ? '_blank' : undefined}
                                 rel={project.url ? 'noopener noreferrer' : undefined}
-                                class="w-full h-fit block px-2.5 py-3 space-y-3 group rounded-xl border transition-all"
+                                class="w-full h-fit block p-2.5 space-y-3 group rounded-xl border transition-all"
                             >
                                 {project.image && <img src={project.image.src} alt={project.name} class="w-full h-auto rounded-lg object-cover" />}
 
-                                <div class="space-y-1">
+                                <div class="px-0.75 space-y-1">
                                     <header class="w-full flex items-center justify-between gap-3">
                                         <h2 class="inline-flex">
                                             {project.name}

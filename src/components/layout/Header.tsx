@@ -7,8 +7,8 @@ export default function Header() {
     return (
         <header className="w-full flex items-center justify-between gap-3">
             <div className="flex items-center gap-4">
-                <div className="size-10 aspect-square rounded-full object-top overflow-hidden">
-                    <img src={me.src} alt={site.description} className="h-17 md:h-16.75 object-cover" />
+                <div className="size-10.25 aspect-square rounded-full object-top overflow-hidden">
+                    <img src={me.src} alt={site.description} className="h-17.75 object-cover" />
                 </div>
                 <div className="select-none">
                     <h1>
