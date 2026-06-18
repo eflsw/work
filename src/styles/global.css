@@ -21,7 +21,7 @@
     --color-dark-700: #333333;
     --color-dark-800: #232323;
     --color-dark-900: #131313;
-    --color-dark-950: #03030c;
+    --color-dark-950: #030303;
 
     --color-iii-50: #c2ffe3;
     --color-iii-100: #85ffc8;
@@ -65,7 +65,7 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
+    --background: var(--color-white);
     --foreground: oklch(0.145 0 0);
     --card: oklch(0.96 0 0);
     --card-foreground: oklch(0.145 0 0);
@@ -87,7 +87,7 @@
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
+    --background: var(--color-dark-950);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
@@ -112,6 +112,7 @@
         @apply border-border outline-ring/50;
         scrollbar-width: thin;
         scrollbar-color: var(--color-ring) var(--color-background);
+        word-spacing: 0.03em;
     }
 
     html {
@@ -129,13 +130,6 @@
     span,
     strong {
         @apply transition-colors duration-200;
-    }
-
-    h2,
-    h3,
-    p,
-    span {
-        word-spacing: 0.028em;
     }
 
     p {
