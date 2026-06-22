@@ -1,9 +1,9 @@
 import type { Link, SiteConfig } from '@/types'
 
 export const site: SiteConfig = {
-    title: 'Atlas — Developer & Designer',
-    author: 'Atlas Estrada',
-    description: 'Front-end web developer, and visual designer. Based in Mexico (TGZ, Chiapas).',
+    title: 'Estrada — Web Developer',
+    author: 'Est.',
+    description: 'Front-end web developer, and visual designer. Based in TGZ, Chiapas, Mexico.',
     url: 'https://e-iii.work/',
     preview: 'https://e-iii.work/images/preview.png',
     language: 'en'
