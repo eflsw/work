@@ -1,8 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import LightRays from '@/components/light-rays'
 ---
 
-<Layout>
+<Layout fullDark>
+    <div class="h-130 -z-5 absolute top-0 left-1/2 -translate-x-1/2"><LightRays client:load raysColor="#00e17c" saturation={2} /></div>
+
     <header>
         <h1 class="text-lg text-center">Free Website Portfolio</h1>
         <h2 class="text-center text-muted-foreground">Open Call – 06/26</h2>
