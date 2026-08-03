@@ -9,8 +9,8 @@
     --font-sans: 'Overused Grotesk', sans-serif;
     --font-mono: 'Space Mono', monospace;
     --text-base: 0.935rem;
-    --leading-snug: 1.37;
-    --tracking-tight: -0.02em;
+    --leading-snug: 1.38;
+    --tracking-tight: -0.015em;
 
     --color-dark-50: #f3f3f3;
     --color-dark-100: #e3e3e3;
@@ -41,78 +41,45 @@
     --color-ring: var(--ring);
     --color-input: var(--input);
     --color-border: var(--border);
-    --color-destructive: var(--destructive);
     --color-accent-foreground: var(--accent-foreground);
     --color-accent: var(--accent);
     --color-muted-foreground: var(--muted-foreground);
     --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
     --color-foreground: var(--foreground);
     --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
+    --radius-md: calc(var(--radius) * 0.7);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 :root {
+    --radius: 0.635rem;
     --background: var(--color-white);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(0.96 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0 / 95%);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --radius: 0.625rem;
+    --foreground: var(--color-dark-950);
+    --muted: var(--color-dark-100);
+    --muted-foreground: var(--color-dark-500);
+    --accent: var(--color-dark-100);
+    --accent-foreground: var(--color-dark-900);
+    --border: var(--color-dark-200);
+    --input: var(--color-dark-200);
+    --ring: var(--color-dark-400);
 }
 
 .dark {
     --background: var(--color-dark-950);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0 / 90%);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
+    --foreground: var(--color-dark-50);
+    --muted: var(--color-dark-800);
+    --muted-foreground: var(--color-dark-400);
+    --accent: var(--color-dark-900);
+    --accent-foreground: var(--color-dark-50);
+    --border: #ffffff1a;
+    --input: #ffffff26;
+    --ring: var(--color-dark-500);
 }
 
 @layer base {
     * {
-        @apply border-border outline-ring/50;
-        scrollbar-width: thin;
-        scrollbar-color: var(--color-ring) var(--color-background);
+        @apply border-border outline-ring/50 scrollbar-thumb-ring scrollbar-track-background scrollbar-thin;
         word-spacing: 0.035em;
     }
 
@@ -121,7 +88,7 @@
     }
 
     body {
-        @apply text-base tracking-tight text-foreground bg-background selection:text-dark-950 selection:bg-iii-300;
+        @apply text-foreground bg-background selection:text-dark-950 selection:bg-iii-300 mx-auto px-5 pt-30 pb-20 text-base tracking-tight sm:max-w-115 sm:px-0;
     }
 
     body,
@@ -139,14 +106,10 @@
 
     p,
     li {
-        @apply text-pretty leading-snug text-secondary-foreground;
+        @apply leading-snug text-pretty;
     }
 
     strong {
         @apply font-medium;
-    }
-
-    code {
-        @apply mx-0.5 px-1 text-sm tracking-tighter bg-dark-100 dark:bg-dark-900 rounded-sm;
     }
 }

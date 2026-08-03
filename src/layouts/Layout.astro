@@ -48,7 +48,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
         <meta name="twitter:description" content={site.description} />
         <meta name="twitter:image" content={site.preview} />
     </head>
-    <body class="mx-auto px-5 pt-30 pb-20 sm:max-w-115 sm:px-0">
+    <body>
         <Analytics />
         <slot />
     </body>
