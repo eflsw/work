@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Button } from './ui/button'
 import { IconCircleHalf2 } from '@tabler/icons-react'
+import { Button } from '../ui/button'
 
 export default function Theme() {
     const [isDark, setIsDark] = React.useState(false)

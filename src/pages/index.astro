@@ -227,22 +227,22 @@ const awards = [
                                 href={project.url}
                                 target={project.url ? '_blank' : undefined}
                                 rel={project.url ? 'noopener noreferrer' : undefined}
-                                class="w-full h-fit block p-2.5 space-y-3 group rounded-xl border transition-all"
+                                class="group block h-fit w-full space-y-3 rounded-xl border p-2.5 transition-all"
                             >
-                                {project.image && <img src={project.image.src} alt={project.name} class="w-full h-auto rounded-lg object-cover" />}
+                                {project.image && <img src={project.image.src} alt={project.name} class="h-auto w-full rounded-lg object-cover" />}
 
-                                <div class="px-0.75 space-y-1">
-                                    <header class="w-full flex items-center justify-between gap-3">
+                                <div class="space-y-1 px-0.75">
+                                    <header class="flex w-full items-center justify-between gap-3">
                                         <h2 class="inline-flex">
                                             {project.name}
                                             <span class="text-muted-foreground">, {project.type}</span>
                                         </h2>
-                                        <span class="text-sm text-muted-foreground">{project.date}</span>
+                                        <span class="text-muted-foreground text-sm">{project.date}</span>
                                     </header>
 
                                     <div class="mt-2 flex flex-wrap items-center gap-1">
                                         {project.stack.map((tag) => (
-                                            <span class="size-fit px-1.5 py-0.5 text-xs tracking-normal bg-card rounded-sm select-none">{tag}</span>
+                                            <span class="bg-card size-fit rounded-sm px-1.5 py-0.5 text-xs tracking-normal select-none">{tag}</span>
                                         ))}
                                     </div>
                                 </div>
@@ -260,11 +260,11 @@ const awards = [
                         <h2>
                             <strong>{item.title}</strong> – {item.company}
                         </h2>
-                        <h3 class="text-sm text-muted-foreground">{item.date}</h3>
+                        <h3 class="text-muted-foreground text-sm">{item.date}</h3>
                         <p>{item.description}</p>
                         <div class="mt-2 flex items-center gap-1">
                             {item.tags.map((tag) => (
-                                <span class="size-fit px-1.5 py-0.5 text-xs tracking-normal bg-card rounded-sm select-none">{tag}</span>
+                                <span class="bg-card size-fit rounded-sm px-1.5 py-0.5 text-xs tracking-normal select-none">{tag}</span>
                             ))}
                         </div>
                     </div>
@@ -277,7 +277,7 @@ const awards = [
                 formation.map((item) => (
                     <div class="space-y-1">
                         <h2 class="font-medium">{item.title}</h2>
-                        <h3 class="text-sm text-muted-foreground">
+                        <h3 class="text-muted-foreground text-sm">
                             {item.company} – {item.date}
                         </h3>
                         <p>{item.description}</p>
@@ -292,11 +292,11 @@ const awards = [
                     {
                         stack.map((item) => (
                             <tr class="*:py-1.5">
-                                <td class="pr-5 md:pr-8 flex">
+                                <td class="flex pr-5 md:pr-8">
                                     <h2>{item.title}</h2>
                                 </td>
                                 <td>
-                                    <h3 class="col-span-2 text-balance text-muted-foreground">
+                                    <h3 class="text-muted-foreground col-span-2 text-balance">
                                         {item.skills.map((skill, index) => (
                                             <span>{`${skill}${index < item.skills.length - 1 ? ', ' : ''}`}</span>
                                         ))}

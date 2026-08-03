@@ -1,13 +1,13 @@
 import { site } from '@/data'
-import { DiaTextReveal } from '../dia-text'
-import Theme from '../Theme'
+import { DiaTextReveal } from '../effects/dia-text'
+import Theme from './Theme'
 import me from '@/assets/me.webp'
 
 export default function Header() {
     return (
-        <header className="w-full flex items-center justify-between gap-3">
+        <header className="flex w-full items-center justify-between gap-3">
             <div className="flex items-center gap-4">
-                <div className="size-10.25 aspect-square rounded-full object-top overflow-hidden">
+                <div className="aspect-square size-10.25 overflow-hidden rounded-full object-top">
                     <img src={me.src} alt={site.description} className="h-17.75 object-cover" />
                 </div>
                 <div className="select-none">

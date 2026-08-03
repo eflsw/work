@@ -1,10 +1,10 @@
 import { mail, gh, ig, x } from '@/data'
-import { Button } from './ui/button'
 import { IconArrowUpRight } from '@tabler/icons-react'
+import { Button } from './ui/button'
 
 export default function Contact() {
     return (
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div className="grid w-full grid-cols-2 gap-2 sm:grid-cols-4">
             <Button asChild variant="outline" className="w-full">
                 <a href={mail.url}>
                     Contact

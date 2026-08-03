@@ -3,11 +3,6 @@ import '@/styles/global.css'
 import { site } from '@/data'
 import Analytics from '@vercel/analytics/astro'
 
-interface Props {
-    fullDark?: boolean
-}
-
-const { fullDark = false }: Props = Astro.props
 const canonical = new URL(Astro.url.pathname, Astro.site)
 ---
 
@@ -31,7 +26,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
     }
 </script>
 
-<html lang="en" class:list={[fullDark && 'dark']}>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -53,7 +48,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
         <meta name="twitter:description" content={site.description} />
         <meta name="twitter:image" content={site.preview} />
     </head>
-    <body class:list={['sm:max-w-115 mx-auto px-5 sm:px-0 pt-30 pb-20']}>
+    <body class="mx-auto px-5 pt-30 pb-20 sm:max-w-115 sm:px-0">
         <Analytics />
         <slot />
     </body>
