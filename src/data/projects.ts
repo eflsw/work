@@ -34,7 +34,7 @@ export const projects: Project[] = [
     {
         name: 'Textest',
         type: 'Webapp',
-        url: 'https://ttt-app.vercel.app',
+        url: 'https://ttt-type.vercel.app',
         image: ttt.src
     },
     {

@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
         company: 'Instituto iMaster',
         date: 'July → August, 2026',
         description:
-            'Design of credentials, photography direction and editing, web project development, and coordination of digital products, ensuring consistency, quality, and timely delivery.',
+            'Built of responsive websites and landing pages. Responsible for optimizing performance, maintaining existing projects, and proactively proposing improvements to enhance existing workflows.',
         features: ['Full-Time', 'In-Person']
     },
     {
