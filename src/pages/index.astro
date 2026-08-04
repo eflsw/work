@@ -1,160 +1,30 @@
 ---
 import { projects } from '@/data/projects'
+import { experiences } from '@/data/experiences'
+import { formation } from '@/data/formation'
+import { stack } from '@/data/stack'
+import { awards } from '@/data/awards'
 import Layout from '@/layouts/Layout.astro'
 import Header from '@/components/layout/Header'
 import Contact from '@/components/Contact'
-import sai from '@/assets/projects/sai.webp'
-import a022 from '@/assets/projects/a022.webp'
-import siga from '@/assets/projects/siga.webp'
-import mcu from '@/assets/projects/mcu.webp'
-import naats from '@/assets/projects/naats.webp'
-import ttt from '@/assets/projects/ttt.webp'
-
-const experience = [
-    {
-        title: 'Project Manager',
-        company: 'Profesionalización Virtual',
-        date: 'September, 2025 → April, 2026',
-        description:
-            'Design of credentials, photography direction and editing, web project development, and coordination of digital products, ensuring consistency, quality, and timely delivery.',
-        tags: ['Full-Time', 'Partially In-Person']
-    },
-    {
-        title: 'Jr. Web Designer',
-        company: 'Pixel Invitación',
-        date: 'August → September, 2025',
-        description:
-            "Design of personalized digital invitations using graphic resources and CMS. Team collaboration, meeting deadlines, and alignment with the company's design approach.",
-        tags: ['Full-Time', 'In-Person', 'Formative Experience']
-    },
-    {
-        title: 'Main Front End Developer',
-        company: 'Profesionalización Virtual',
-        date: 'April, 2024 → August, 2025',
-        description:
-            'Design and development of interfaces for systems, websites and applications. Responsible for UX & UI design, layout, testing, and creation of reusable components and utilities.',
-        tags: ['Full-Time', 'Remote']
-    },
-    {
-        title: 'Sales Advisor',
-        company: 'Aló Idiomas',
-        date: 'February → March, 2025',
-        description:
-            'Advise prospective students on educational programs, identify their needs and appropriate course options, manage the enrollment process, and provide customer service through various communication channels.',
-        tags: ['In-Person']
-    },
-    {
-        title: 'Science Teacher',
-        company: 'School MindUp',
-        date: 'September, 2024 → February, 2025',
-        description: 'Programming, technology, and science classes for students ages 8 to 18, combining theory and practice.',
-        tags: ['In-Person']
-    },
-    {
-        title: 'Team Leader & Full Stack Developer',
-        company: 'Municipal DIF',
-        date: 'October, 2023 → May, 2024',
-        description:
-            "Development of the Integral Management System web project. Overseeing the team's code, defining the project architecture, developing the database, and creating the user interface.",
-        tags: ['Partially In-Person', 'Professional Internships']
-    },
-    {
-        title: 'Library Manager',
-        company: 'CONALEP',
-        date: 'March → September, 2023',
-        description:
-            'Management of the library collection, resource management, support for the educational community, student counseling, and assistance with activities to promote reading.',
-        tags: ['In-Person', 'Social Service']
-    }
-]
-
-const formation = [
-    {
-        title: 'Technical Professional–Bachelor in Computer Science',
-        company: 'Colegio Nacional de Educación Profesional Técnica',
-        date: '2021 → 2024',
-        description:
-            'Academic excellence. Training in AI, technology, networking and programming. Participation in robotics club, and certifications in networking and Excel applied to databases.'
-    },
-    {
-        title: 'Web Development Courses',
-        company: 'Midudev Academy',
-        date: 'December, 2025',
-        description: 'CSS (animations, grid), Figma, GSAP, HTML, JavaScript (ES2023 & ES2024, promises), Python, Tailwind CSS and TypeScript (utility types).'
-    }
-]
-
-const stack = [
-    {
-        title: 'Development',
-        skills: ['HTML', 'CSS', 'Git', 'GitHub', 'Markdown']
-    },
-    {
-        title: 'Languages',
-        skills: ['TypeScript', 'JavaScript', 'PHP']
-    },
-    {
-        title: 'Frameworks',
-        skills: ['Astro', 'Vue', 'Tailwind CSS', 'Bootstrap']
-    },
-    {
-        title: 'Libraries',
-        skills: ['React', 'jQuery', 'Shadcn UI', 'Motion']
-    },
-    {
-        title: 'Databases',
-        skills: ['SQL', 'MySQL']
-    },
-    {
-        title: 'Design',
-        skills: ['Inkscape', 'Figma', 'Canva']
-    },
-    {
-        title: 'Productivity',
-        skills: ['Notion', 'Artificial Intelligence', 'Office Suite', 'Google Workspace']
-    }
-]
-
-const awards = [
-    {
-        title: 'Chess Tournament',
-        info: 'First Place, 2024'
-    },
-    {
-        title: 'Outstanding Commitment to Reading',
-        info: 'Award, 2024'
-    },
-    {
-        title: 'Mathematical Reasoning',
-        info: 'First Place, 2023'
-    },
-    {
-        title: 'Public Speaking',
-        info: 'First Place, 2023'
-    },
-    {
-        title: 'General Knowledge',
-        info: 'First Place, 2019'
-    }
-]
 ---
 
 <Layout>
     <Header client:load />
 
-    <main class="mt-15 space-y-13">
+    <main class="mt-14 space-y-13">
         <article class="space-y-2">
             <p>
                 Front end developer with +4 years of experience in web development. With the intention of exploring its potential to express concepts, and solve problems.
             </p>
-            <p>I'm 19 years old, and I started learning to code when I was 15. Originally from Mexico; I speak Spanish, and English (B2 level).</p>
+            <p>I'm 19 years old, and I started learning to code when I was 15. Originally from Mexico; I speak Spanish, and English ––B2 level.</p>
             <p>
-                I've a particular interest in design, microinteractions, typography, and coffee, and I appreciate proper spelling and learning ––in which I'm particularly
-                versed.
+                I've a particular interest in microinteractions, performance, typography, minimalism, and meaningful design. I appreciate proper spelling, and learning
+                ––in which I'm particularly versed.
             </p>
         </article>
         <div><Contact client:load /></div>
-        <section class="space-y-5">
+        <section>
             <h2 class="text-muted-foreground">Some Projects</h2>
             <div class="space-y-4">
                 {
@@ -166,11 +36,11 @@ const awards = [
                                 href={project.url}
                                 target={project.url ? '_blank' : undefined}
                                 rel={project.url ? 'noopener noreferrer' : undefined}
-                                class="group relative block h-fit w-full overflow-hidden rounded-xl border p-2 transition-all"
+                                class="group relative block h-fit w-full overflow-hidden rounded-xl border p-2 transition"
                             >
                                 {project.image && <img src={project.image} alt={project.name} class="h-auto w-full rounded-lg object-cover" />}
-                                <div class="bg-background/95 absolute top-0 left-0 flex size-full flex-col items-center justify-center opacity-0 backdrop-blur-md transition duration-150 group-hover:opacity-100">
-                                    <hgroup class="text-lg">{project.name}</hgroup>
+                                <div class="bg-background absolute top-0 left-0 flex size-full flex-col items-center justify-center opacity-0 transition duration-200 group-hover:opacity-100">
+                                    <hgroup>{project.name}</hgroup>
                                     <span class="text-muted-foreground font-mono text-xs tracking-tighter uppercase">{project.type}</span>
                                 </div>
                             </Card>
@@ -179,55 +49,51 @@ const awards = [
                 }
             </div>
         </section>
-        <section class="space-y-5">
+        <section>
             <h2 class="text-muted-foreground">Experience</h2>
             {
-                experience.map((item) => (
+                experiences.map((item) => (
                     <div class="space-y-1">
                         <h2>
-                            <strong>{item.title}</strong> – {item.company}
+                            <strong>{item.title}</strong> –– {item.company}
                         </h2>
                         <h3 class="text-muted-foreground text-sm">{item.date}</h3>
                         <p>{item.description}</p>
-                        <div class="mt-2 flex items-center gap-1">
-                            {item.tags.map((tag) => (
-                                <span class="bg-card size-fit rounded-sm px-1.5 py-0.5 text-xs tracking-normal select-none">{tag}</span>
+                        <div class="mt-2! flex items-center gap-1">
+                            {item.features.map((tag) => (
+                                <span class="bg-muted/70 size-fit rounded-sm px-1.5 py-0.5 text-xs tracking-normal select-none">{tag}</span>
                             ))}
                         </div>
                     </div>
                 ))
             }
         </section>
-        <section class="space-y-5">
+        <section>
             <h2 class="text-muted-foreground">Formation</h2>
             {
                 formation.map((item) => (
                     <div class="space-y-1">
                         <h2 class="font-medium">{item.title}</h2>
                         <h3 class="text-muted-foreground text-sm">
-                            {item.company} – {item.date}
+                            {item.institution} –– {item.date}
                         </h3>
                         <p>{item.description}</p>
                     </div>
                 ))
             }
         </section>
-        <section class="space-y-5">
+        <section>
             <h2 class="text-muted-foreground">Skills</h2>
             <table class="w-full table-auto">
                 <tbody>
                     {
                         stack.map((item) => (
                             <tr class="*:py-1.5">
-                                <td class="flex pr-5 md:pr-8">
-                                    <h2>{item.title}</h2>
-                                </td>
-                                <td>
-                                    <h3 class="text-muted-foreground col-span-2 text-balance">
-                                        {item.skills.map((skill, index) => (
-                                            <span>{`${skill}${index < item.skills.length - 1 ? ', ' : ''}`}</span>
-                                        ))}
-                                    </h3>
+                                <td class="flex pr-8">{item.category}</td>
+                                <td class="text-muted-foreground text-balance">
+                                    {item.skills.map((skill, index) => (
+                                        <span>{`${skill}${index < item.skills.length - 1 ? ', ' : ''}`}</span>
+                                    ))}
                                 </td>
                             </tr>
                         ))
@@ -235,17 +101,18 @@ const awards = [
                 </tbody>
             </table>
         </section>
-        <section class="space-y-5">
+        <section>
             <h2 class="text-muted-foreground">Awards</h2>
-            <div class="space-y-1.5">
+            <ul class="space-y-1.5">
                 {
                     awards.map((award) => (
-                        <h2 class="sm:flex sm:gap-1.5">
-                            {award.title}, <span class="text-muted-foreground">{award.info}</span>
-                        </h2>
+                        <li>
+                            {award.title}
+                            <span class="text-muted-foreground"> –– {award.info}</span>
+                        </li>
                     ))
                 }
-            </div>
+            </ul>
         </section>
     </main>
 </Layout>

@@ -65,7 +65,7 @@ export interface DiaTextRevealProps extends Omit<HTMLMotionProps<'span'>, 'ref' 
 export function DiaTextReveal({
     text,
     colors = DEFAULT_COLORS,
-    textColor = 'var(--foreground)',
+    textColor = 'var(--dark)',
     duration = 1.5,
     delay = 0,
     repeat = false,

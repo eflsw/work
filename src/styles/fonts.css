@@ -6,7 +6,7 @@
 @font-face {
     font-family: 'Overused Grotesk';
     src: url('/fonts/OverusedGrotesk.woff2');
-    font-feature-settings: 'cv05';
+    font-feature-settings: 'cv05', 'ss11';
 }
 
 @font-face {
