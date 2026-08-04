@@ -1,3 +1,7 @@
+export * from './award'
+export * from './experience'
+export * from './formation'
 export * from './link'
 export * from './project'
 export * from './site'
+export * from './stack'
