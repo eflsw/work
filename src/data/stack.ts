@@ -28,5 +28,9 @@ export const stack: Stack[] = [
     {
         category: 'Productivity',
         skills: ['Notion', 'Artificial Intelligence', 'Office Suite', 'Google Workspace']
+    },
+    {
+        category: 'Also worked',
+        skills: ['Laravel (Blade & Herd)', 'Next.js', 'WordPress', 'Elementor']
     }
 ]
