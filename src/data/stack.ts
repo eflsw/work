@@ -31,6 +31,6 @@ export const stack: Stack[] = [
     },
     {
         category: 'Also worked',
-        skills: ['Laravel (Blade & Herd)', 'Next.js', 'WordPress', 'Elementor']
+        skills: ['Next.js', 'Laravel (Blade & Herd)', 'WordPress (Elementor)']
     }
 ]
